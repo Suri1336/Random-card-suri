@@ -8,13 +8,8 @@ import "./assets/img/4geeks.ico";
 window.onload = function() {
   //write your code here
 
-  let randomSuits = ["♦", "♥", "♠", "♣"];
-  let randomSuitNumber = Math.floor(Math.random() * randomSuits.length);
-  document.querySelector(".top-suit").innerHTML = randomSuits[randomSuitNumber];
-  document.querySelector(".bottom-suit").innerHTML =
-    randomSuits[randomSuitNumber];
-
-  let randomCardNumbers = [
+  let SuitsArrey = ["♦", "♥", "♠", "♣"];
+  let numbersArrey = [
     "1",
     "2",
     "3",
@@ -28,6 +23,24 @@ window.onload = function() {
     "Q",
     "K"
   ];
-  let randomNumber = Math.floor(Math.random() * randomCardNumbers.length);
-  document.querySelector(".number").innerHTML = randomCardNumbers[randomNumber];
+
+  
+  let randomSuitIndex = Math.floor(Math.random() * SuitsArrey.length);
+  let randomCardNumberIndex = Math.floor(Math.random() * numbersArrey.length);
+
+  let randomSuit = SuitsArrey[randomSuitIndex];
+  let randomNumber = numbersArrey[randomCardNumberIndex];
+
+  let topSuitDiv = document.querySelector(".top-suit");
+  let bottomSuitDiv = document.querySelector(".bottom-suit");
+  let numberDiv = document.querySelector(".number");
+
+  bottomSuitDiv.innerHTML = randomSuit;
+  topSuitDiv.innerHTML = randomSuit;
+  numberDiv.innerHTML = randomNumber;
+  if (randomSuit === "♥" || randomSuit === "♦") {
+    topSuitDiv.style.color = "red";
+    bottomSuitDiv.style.color = "red";
+    numberDiv.style.color = "red";
+  }
 };
