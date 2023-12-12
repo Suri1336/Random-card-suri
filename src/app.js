@@ -80,7 +80,7 @@ const changeCard = () => {
     topSuitDiv.style.color = "red";
     bottomSuitDiv.style.color = "red";
     numberDiv.style.color = "red";
-  } else {
+  } if  (randomSuit === "♣" || randomSuit === "♠") {
     topSuitDiv.style.color = "black";
     bottomSuitDiv.style.color = "black";
     numberDiv.style.color = "black";
