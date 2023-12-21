@@ -39,6 +39,7 @@ import "./assets/img/4geeks.ico";
 // window.onload = function() {
 //   changeCard();
 // };
+
 // Arrays for card suits and numbers
 const suitsArray = ["♦", "♥", "♠", "♣"];
 const numbersArray = [
@@ -80,7 +81,8 @@ const changeCard = () => {
     topSuitDiv.style.color = "red";
     bottomSuitDiv.style.color = "red";
     numberDiv.style.color = "red";
-  } if  (randomSuit === "♣" || randomSuit === "♠") {
+  }
+  if (randomSuit === "♣" || randomSuit === "♠") {
     topSuitDiv.style.color = "black";
     bottomSuitDiv.style.color = "black";
     numberDiv.style.color = "black";
